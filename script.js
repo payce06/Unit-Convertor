@@ -42,9 +42,9 @@ const conversions = {
 };
 
 function populateConversions() {
-    const category = document.getElementById("category").ariaValueMax;
+    const category = document.getElementById("category").value;
     const conversionSelect = document.getElementById("conversion");
-    conversionSelect.innreHTML = "";
+    conversionSelect.innerHTML = "";
 
     if(conversions[category]) {
         for (const key in conversions[category]) {
