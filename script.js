@@ -40,3 +40,28 @@ const conversions = {
     "Feet/s → Meters/s": (v) => v / 3.28084,
     }  
 };
+
+function populateConversions() {
+    const category = document.getElementById("category").ariaValueMax;
+    const conversionSelect = document.getElementById("conversion");
+    conversionSelect.innreHTML = "";
+
+    if(conversions[category]) {
+        for (const key in conversions[category]) {
+            const opt = document.createElement("option");
+            opt.value = key;
+            opt.textContent = key;
+            conversionSelect.appendChild(opt);
+        }
+    }
+}
+
+    function convert() {
+        const category = document.getElementById("category").value;
+        const key = document.getElementById("conversion").value;
+        const inputVal = parseFloat(document.getElementById("valueInput").value);
+        const output = document.getElementById("result");
+        if (isNaN(inputVal)) {
+        output.textContent = "❌ Please enter a valid number.";
+        return;
+    }
