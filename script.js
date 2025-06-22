@@ -17,3 +17,26 @@ const conversions = {
         "Inches → Centimeters": (v) => v * 2.54,
         "Centimeters → Inches": (v) => v / 2.54,
     },
+    weight:{
+        "Kilograms → Pounds": (v) => v * 2.20462,
+        "Pounds → Kilograms": (v) => v / 2.20462,
+        "Grams → Ounces": (v) => v / 28.3495,
+        "Ounces → Grams": (v) => v * 1000,
+        "Tons → Kilograms": (v) => v * 1000,
+        "Kilograms → Tons": (v) => v / 1000,
+    },
+    time: {
+    "Seconds → Minutes": (v) => v / 60,
+    "Minutes → Seconds": (v) => v * 60,
+    "Minutes → Hours": (v) => v / 60,
+    "Hours → Minutes": (v) => v * 60,
+    "Hours → Days": (v) => v / 24,
+    "Days → Hours": (v) => v * 24,
+    },
+    speed: {
+    "Km/h → Miles/h": (v) => v / 1.60934,
+    "Miles/h → Km/h": (v) => v * 1.60934,
+    "Meters/s → Feet/s": (v) => v * 3.28084,
+    "Feet/s → Meters/s": (v) => v / 3.28084,
+    }  
+};
