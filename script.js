@@ -65,3 +65,13 @@ function populateConversions() {
         output.textContent = "❌ Please enter a valid number.";
         return;
     }
+    const fn = conversions[category]?.[key];
+
+    if (fn) {
+        const resultVal = fn(inputVal).toFixed(4);
+        const [fromUnit, toUnit] = key.split(" → ");
+        output.textContent = `✅ ${inputVal} ${fromUnit} → ${resultVal} ${toUnit}`;
+    } else {
+        output.textContent = "Invalid conversation.";
+    }
+}
